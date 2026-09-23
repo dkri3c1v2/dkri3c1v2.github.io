@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+.profile-header {
+    background-color: maroon;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: linen;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.profile-meta {
+    text-align: center;
+    color: seashell;
+    font-size: 11px;
+}
+
+.profile-meta span {
+    margin: 0 10px;
+}
+
+.hero {
+    background-color: black;
+    text-align: center;
+    padding: 16px;
+}
+
+.hero img {
+    width: 50%;
+}
+
+.panel {
+    width: 50%;
+    height: 400px;
+    float: left;
+    padding: 18px 10px;
+    font-size: 12px;
+}
+
+.panel h2 {
+    font-size: 18px;
+}
+
+.panel h3 {
+    font-size: 13px;
+}
+
+.about {
+    background-color: blue;
+    color: brown;
+}
+
+.about h2,
+.about h3 {
+    color: maroon;
+}
+
+.community {
+    background-color: red;
+    color: white;
+}
+
+.community h2,
+.community h3 {
+    color: gold;
+}
+
+.competitions {
+    background-color: white;
+    color: brown;
+}
+
+.competitions h2,
+.competitions h3 {
+    color: maroon;
+}
+
+.security {
+    background-color: green;
+    color: brown;
+}
+
+.security h2,
+.security h3 {
+    color: gold;
+}
+
+.contact {
+    clear: both;
+    background-color: red;
+    color: ivory;
+    text-align: center;
+    padding: 18px;
+}
+
+a:link {
+    color: goldenrod;
+}
+
+a:visited {
+    color: plum;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: orange;
+}
