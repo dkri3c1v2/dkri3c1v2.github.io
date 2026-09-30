@@ -1,0 +1,17 @@
+.board{
+    background-color: green;
+    list-style: None;
+    display : flex;
+    padding:20px;
+    gap : 30px
+}
+
+.board a:visited{
+    color :brown
+}
+.board a:hover{
+    color: red;
+}
+.board a:active{
+    color: aqua;
+}
