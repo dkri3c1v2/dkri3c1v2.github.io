@@ -1,0 +1,726 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: ghostwhite;
+    color: midnightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible {
+    outline: 3px solid deepskyblue;
+    outline-offset: 4px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 72px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: midnightblue;
+    color: white;
+    border-bottom: 3px solid deepskyblue;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: deepskyblue;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 26px;
+}
+
+nav a {
+    padding: 7px 0;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 180ms ease, border-color 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+.hero {
+    min-height: 590px;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(250px, 2fr);
+    align-items: center;
+    gap: 8%;
+    background: linear-gradient(135deg, midnightblue, darkslateblue);
+    color: white;
+}
+
+.eyebrow,
+.section-number,
+.project-label {
+    margin: 0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.eyebrow {
+    color: lightskyblue;
+}
+
+.section-number,
+.project-label {
+    color: royalblue;
+}
+
+.hero h1 {
+    max-width: 760px;
+    margin: 22px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(46px, 7vw, 88px);
+    font-weight: normal;
+    line-height: 1.03;
+}
+
+.hero-intro {
+    max-width: 650px;
+    margin: 0 0 34px;
+    color: aliceblue;
+    font-size: 17px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: deepskyblue;
+    color: midnightblue;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: 2px solid deepskyblue;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background-color: transparent;
+    color: white;
+}
+
+.profile-figure {
+    margin: 0;
+    padding: 28px;
+    background-color: white;
+    color: darkslateblue;
+    border-radius: 28px 28px 6px 28px;
+    box-shadow: 18px 18px 0 deepskyblue;
+    transform: rotate(2deg);
+}
+
+.profile-figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background-color: mistyrose;
+    border: 5px solid midnightblue;
+}
+
+.profile-figure figcaption {
+    margin-top: 16px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.section {
+    padding: 90px 8%;
+    scroll-margin-top: 82px;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    margin: 14px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: normal;
+    line-height: 1.12;
+}
+
+.section-intro {
+    max-width: 680px;
+    margin: 18px 0 0;
+    color: darkslategray;
+}
+
+.about {
+    background-color: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8%;
+}
+
+.lead {
+    margin: 0;
+    color: darkslateblue;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    line-height: 1.45;
+}
+
+.about-copy p {
+    margin: 0 0 20px;
+    color: darkslategray;
+}
+
+.interests {
+    background-color: aliceblue;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.interest-card {
+    min-height: 280px;
+    padding: 28px;
+    background-color: white;
+    border-top: 5px solid royalblue;
+    box-shadow: 0 10px 25px lightsteelblue;
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+    background-color: lightcyan;
+}
+
+.card-index {
+    margin: 0 0 44px;
+    color: royalblue;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+}
+
+.interest-card h3,
+.project-card h3 {
+    margin: 0 0 14px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+}
+
+.interest-card p:last-child,
+.project-card p:last-child {
+    margin: 0;
+    color: darkslategray;
+    font-size: 14px;
+}
+
+.skills {
+    background-color: white;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.profile-table {
+    width: 100%;
+    min-width: 720px;
+    color: midnightblue;
+    font-size: 14px;
+    text-align: left;
+}
+
+.profile-table caption {
+    padding: 0 0 14px;
+    color: darkslategray;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.profile-table th,
+.profile-table td {
+    padding: 17px 19px;
+    vertical-align: middle;
+}
+
+.profile-table thead th {
+    background-color: midnightblue;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.skills-table {
+    border-collapse: collapse;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid lightsteelblue;
+}
+
+.skills-table tbody th {
+    background-color: lightcyan;
+}
+
+.skills-table tbody tr:nth-child(even) td {
+    background-color: ghostwhite;
+}
+
+.skills-table .focus-row td {
+    background-color: deepskyblue;
+    color: midnightblue;
+    font-weight: bold;
+    text-align: center;
+}
+
+.schedule-wrap {
+    margin-top: 58px;
+}
+
+.schedule-table {
+    border-collapse: separate;
+    border-spacing: 6px;
+    background-color: aliceblue;
+}
+
+.schedule-table tbody th {
+    background-color: royalblue;
+    color: white;
+}
+
+.schedule-table tbody td {
+    background-color: white;
+}
+
+.schedule-table tbody tr:hover td {
+    background-color: lightcyan;
+}
+
+.projects {
+    background-color: midnightblue;
+    color: white;
+}
+
+.projects .section-number {
+    color: lightskyblue;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    min-height: 250px;
+    padding: 36px;
+    background-color: white;
+    color: midnightblue;
+    border-left: 8px solid deepskyblue;
+}
+
+.project-card .project-label {
+    margin-bottom: 38px;
+    color: royalblue;
+}
+
+.accent-card {
+    background-color: deepskyblue;
+    border-left-color: white;
+}
+
+.accent-card .project-label,
+.accent-card p:last-child {
+    color: midnightblue;
+}
+
+footer {
+    min-height: 110px;
+    padding: 30px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: darkslateblue;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: lightskyblue;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        position: static;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        align-items: flex-start;
+    }
+
+    nav {
+        max-width: 390px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-figure {
+        max-width: 430px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .site-header,
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 14px 20px;
+    }
+
+    .hero,
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero {
+        padding-top: 68px;
+        padding-bottom: 74px;
+    }
+
+    .about-grid,
+    .card-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-figure {
+        margin-right: 18px;
+    }
+
+    .lead {
+        margin-bottom: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms;
+    }
+}
+
+/* Deliberately loud palette inspired by the reference website. */
+body {
+    background-color: black;
+    color: white;
+}
+
+.site-header {
+    background-color: maroon;
+    color: white;
+    border-color: red;
+}
+
+.logo span,
+nav a:hover,
+nav a:focus-visible {
+    color: gold;
+    border-color: gold;
+}
+
+.hero {
+    background: black;
+    color: white;
+}
+
+.eyebrow {
+    color: linen;
+}
+
+.button-link {
+    background-color: red;
+    color: gold;
+    border-color: blue;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background-color: blue;
+    color: red;
+}
+
+.profile-figure {
+    background-color: black;
+    color: white;
+    box-shadow: 18px 18px 0 red;
+}
+
+.profile-figure img {
+    background-color: black;
+    border-color: gold;
+}
+
+.about {
+    background-color: blue;
+    color: brown;
+}
+
+.about .section-number,
+.about .lead,
+.about-copy p {
+    color: brown;
+}
+
+.interests {
+    background-color: black;
+    color: white;
+}
+
+.interest-card {
+    border-color: maroon;
+    box-shadow: 0 10px 25px black;
+}
+
+.interest-card:nth-child(1) {
+    background-color: blue;
+    color: brown;
+}
+
+.interest-card:nth-child(1) .card-index,
+.interest-card:nth-child(1) h3,
+.interest-card:nth-child(1) p:last-child {
+    color: brown;
+}
+
+.interest-card:nth-child(2) {
+    background-color: red;
+    color: white;
+}
+
+.interest-card:nth-child(2) .card-index,
+.interest-card:nth-child(2) h3 {
+    color: gold;
+}
+
+.interest-card:nth-child(2) p:last-child {
+    color: white;
+}
+
+.interest-card:nth-child(3) {
+    background-color: white;
+    color: brown;
+}
+
+.interest-card:nth-child(3) .card-index,
+.interest-card:nth-child(3) h3 {
+    color: maroon;
+}
+
+.interest-card:nth-child(3) p:last-child {
+    color: brown;
+}
+
+.interest-card:nth-child(4) {
+    background-color: green;
+    color: brown;
+}
+
+.interest-card:nth-child(4) .card-index,
+.interest-card:nth-child(4) h3 {
+    color: gold;
+}
+
+.interest-card:nth-child(4) p:last-child {
+    color: brown;
+}
+
+.interest-card:hover {
+    background-color: yellow;
+}
+
+.skills {
+    background-color: white;
+    color: brown;
+}
+
+.skills .section-number,
+.skills .section-intro,
+.profile-table,
+.profile-table caption {
+    color: brown;
+}
+
+.profile-table thead th {
+    background-color: maroon;
+    color: gold;
+}
+
+.skills-table th,
+.skills-table td {
+    border-color: black;
+}
+
+.skills-table tbody th {
+    background-color: blue;
+    color: brown;
+}
+
+.skills-table tbody td,
+.skills-table tbody tr:nth-child(even) td {
+    background-color: red;
+    color: white;
+}
+
+.skills-table tbody tr:nth-child(even) td {
+    background-color: green;
+    color: brown;
+}
+
+.skills-table .focus-row td {
+    background-color: blue;
+    color: red;
+}
+
+.schedule-table {
+    background-color: black;
+}
+
+.schedule-table tbody th {
+    background-color: red;
+    color: gold;
+}
+
+.schedule-table tbody td {
+    background-color: blue;
+    color: brown;
+}
+
+.schedule-table tbody tr:hover td {
+    background-color: green;
+    color: gold;
+}
+
+.projects {
+    background-color: green;
+    color: brown;
+}
+
+.projects .section-number {
+    color: gold;
+}
+
+.project-card {
+    background-color: white;
+    color: brown;
+    border-color: maroon;
+}
+
+.project-card .project-label,
+.project-card h3,
+.project-card p:last-child {
+    color: brown;
+}
+
+.accent-card {
+    background-color: red;
+    color: white;
+    border-color: gold;
+}
+
+.accent-card .project-label,
+.accent-card h3 {
+    color: gold;
+}
+
+.accent-card p:last-child {
+    color: white;
+}
+
+footer {
+    background-color: red;
+    color: ivory;
+}
+
+footer a,
+footer a:hover,
+footer a:focus-visible {
+    color: gold;
+}
